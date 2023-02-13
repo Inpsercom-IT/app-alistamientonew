@@ -1,0 +1,117 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.despacharVehiculo" data-show="app.despacharVehiculo.onShow" data-after-show="app.despacharVehiculo.afterShow" id="despacharVehiculoScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.despacharVehiculo.title"></span>
+            <a data-align="right" class="fa fa-reply" href="components/home/view.html" onclick="verMenu('1')" aria-hidden="true" data-role="button"></a>
+        </div>
+    </header>
+    
+    <header data-role="header">
+        <div id="heaer_lista" style="margin-left: 30px;">
+                <div class=" w3-row w3-section">
+                    <div class="w3-text-red" style="width:50px"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                    <label id="lista_usuario_asignado" class="w3-text-red"></label>
+                </div>
+                <table border="0" cellspacing="0" cellpadding="0" id="tabladespacho" style="width:750px">
+                    <tr>
+                        <td>
+                            <p>
+                                    <label class="w3-text-red"><b>Num Orden</b></label>
+                                </p>
+                                <p>
+                                    <input id="ordenDV" type="number" style='max-width:100px; min-width:100px; height:30px;' />
+                                </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                                <div class="w3-text-red"><b>Inicio</b>
+                                    <div ><input class="Fields" id="FechaInicioDV" style="width: 75%;" align="center" placeholder="Fecha Inicio" onkeyup="javascript:this.value='';"></div>
+                                </div>
+                        </td>
+                        
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <div class="w3-text-red"><b>Fin</b>
+                                <div ><input id="FechaFinDV" class="Fields" align="center" placeholder="Fecha Fin" onkeyup="javascript:this.value='';"></div>
+                            </div>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Estado</b></label>
+                            </p>
+                            <p>
+                                <div id="divcboEstadoDV" style='max-width:150px; min-width:150px'></div>
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Vin</b></label>
+                            </p>
+                            <p>
+                                <input id="txtVINDV" type="text" style='max-width:100px; min-width:100px; height:30px;' />
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Año</b></label>
+                            </p>
+                            <p>
+                                <input id="txtAnioDV" type="text" style='max-width:100px; min-width:100px; height:30px;' />
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Mes</b></label>
+                            </p>
+                            <p>
+                                <div id="divcbomesDV" style='max-width:150px; min-width:150px'></div>
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Marca</b></label>
+                            </p>
+                            <p>
+                                <div id="divcbomarcasDV" style='max-width:150px; min-width:150px'></div
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td>
+                            <p>
+                                <label class="w3-text-red"><b>Modelo</b></label>
+                            </p>
+                            <p>
+                                <div id="divcboModeloDV" style='max-width:150px; min-width:150px'></div>
+                            </p>
+                        </td>
+                        <td>&nbsp;&nbsp;</td>                  
+                        <td align="center">
+                            <p>
+                                <a class="w3-btn k-button primary" aria-label="Buscar" id="btn_buscar_consultaDV1" onclick="buscarlistasDV1(document.getElementById('txtAnioDV').value,document.getElementById('ordenDV').value, document.getElementById('FechaInicioDV').value, document.getElementById('FechaFinDV').value, document.getElementById('txtVINDV').value,document.getElementById('divcbomesDV').value,document.getElementById('marcas2DV').value,document.getElementById('modelo2DV').value,document.getElementById('estado2DV').value);">
+                                    &nbsp;<i id="icn_buscar_consultaDV1" class=" fa fa-search" aria-hidden="true">
+                                    </i>
+                                    &nbsp;
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+     </header>
+     <table align="center" width="1000px" border="0" cellspacing="0" cellpadding="0" id="tablaOTDetalleDV" style="display:block">
+        <tr>
+            <td>
+                <div id="datoslistaDV" style="font-size:11px; width:1000px"></div>
+
+            </td>
+        </tr>
+    </table>
+</div>
